@@ -55,25 +55,25 @@ public class MedicineServiceImpl implements MedicineService {
 	@Override
 	public List<Medicine> findByPriceBetween(double startprice, double endPrice) {
 		// TODO Auto-generated method stub
-		return null;
+		return medicineRepository.findByMedPriceBetween(startprice, endPrice);
 	}
 
 	@Override
 	public List<Medicine> findByStockBetween(int startStock, int endStock) {
 		// TODO Auto-generated method stub
-		return null;
+		return medicineRepository.findByMedStockBetween(startStock, endStock);
 	}
 
 	@Override
 	public List<Medicine> findByManDateBetween(Date startDate, Date endDate) {
 		// TODO Auto-generated method stub
-		return null;
+		return medicineRepository.findByManDateBetween(startDate, endDate);
 	}
 
 	@Override
 	public List<Medicine> findTopFiveStockByPrice() {
 		// TODO Auto-generated method stub
-		return null;
+		return medicineRepository.findTopFiveStockByMedPrice();
 	}
 
 }
