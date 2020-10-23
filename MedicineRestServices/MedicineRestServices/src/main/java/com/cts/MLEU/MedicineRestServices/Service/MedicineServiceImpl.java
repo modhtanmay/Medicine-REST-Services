@@ -76,4 +76,10 @@ public class MedicineServiceImpl implements MedicineService {
 		return medicineRepository.findTopFiveStockByMedPrice();
 	}
 
+	@Override
+	public List<Medicine> findByExpDateBetween(Date startDate, Date endDate) {
+		// TODO Auto-generated method stub
+		return medicineRepository.findByExpDateBetween(startDate, endDate);
+	}
+
 }

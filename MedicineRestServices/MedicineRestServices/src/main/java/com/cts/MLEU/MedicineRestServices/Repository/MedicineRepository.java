@@ -18,6 +18,8 @@ public interface MedicineRepository extends JpaRepository<Medicine, Integer> {
 	
 	public List<Medicine> findByManDateBetween(Date startDate,Date endDate);
 	
+	public List<Medicine> findByExpDateBetween(Date startDate,Date endDate);
+	
 	@Query(value="select * from medicine",nativeQuery = true)
 	public List<Medicine> findTopFiveStockByMedPrice();
 }

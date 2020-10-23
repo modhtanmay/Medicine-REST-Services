@@ -27,6 +27,8 @@ public interface MedicineService {
 	
 	public List<Medicine> findByManDateBetween(Date startDate,Date endDate);
 	
+	public List<Medicine> findByExpDateBetween(Date startDate,Date endDate);
+	
 	public List<Medicine> findTopFiveStockByPrice();
 	
 }
