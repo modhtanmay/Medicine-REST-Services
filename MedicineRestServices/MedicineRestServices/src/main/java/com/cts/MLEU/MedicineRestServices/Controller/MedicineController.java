@@ -112,4 +112,9 @@ public class MedicineController {
 	public ResponseEntity<Object> getByVolumeBetween(@PathVariable int startStock, @PathVariable int endStock) {
 		return new ResponseEntity<>(medicineService.findByStockBetween(startStock, endStock), HttpStatus.OK);
 	}
+	
+	@GetMapping("/getTopFiveMedicine")
+	public ResponseEntity<Object> getTopFiveStock() {
+		return new ResponseEntity<>(medicineService.findTopFiveStockByPrice(), HttpStatus.OK);
+	}
 }
