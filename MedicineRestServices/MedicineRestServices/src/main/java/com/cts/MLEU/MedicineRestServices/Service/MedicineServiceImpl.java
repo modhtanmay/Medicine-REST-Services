@@ -1,5 +1,6 @@
 package com.cts.MLEU.MedicineRestServices.Service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +44,36 @@ public class MedicineServiceImpl implements MedicineService {
 		// TODO Auto-generated method stub
 		medicineRepository.deleteById(medId);
 		
+	}
+
+	@Override
+	public List<Medicine> findByName(String medName) {
+		// TODO Auto-generated method stub
+		return medicineRepository.findByMedName(medName);
+	}
+
+	@Override
+	public List<Medicine> findByPriceBetween(double startprice, double endPrice) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Medicine> findByStockBetween(int startStock, int endStock) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Medicine> findByManDateBetween(Date startDate, Date endDate) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Medicine> findTopFiveStockByPrice() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
