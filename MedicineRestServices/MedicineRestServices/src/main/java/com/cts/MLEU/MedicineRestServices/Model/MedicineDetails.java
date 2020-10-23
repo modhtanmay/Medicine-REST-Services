@@ -16,7 +16,7 @@ public class MedicineDetails {
 	private int compRank;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	private Medicine medicine;
+	private Medicine medicineId;
 
 	public int getMedCompId() {
 		return medCompId;
@@ -51,20 +51,20 @@ public class MedicineDetails {
 	}
 
 	public Medicine getMedicine() {
-		return medicine;
+		return medicineId;
 	}
 
-	public void setMedicine(Medicine medicine) {
-		this.medicine = medicine;
+	public void setMedicine(Medicine medicineId) {
+		this.medicineId = medicineId;
 	}
 
-	public MedicineDetails(int medCompId, String compName, String compAddr, int compRank, Medicine medicine) {
+	public MedicineDetails(int medCompId, String compName, String compAddr, int compRank, Medicine medicineId) {
 		super();
 		this.medCompId = medCompId;
 		this.compName = compName;
 		this.compAddr = compAddr;
 		this.compRank = compRank;
-		this.medicine = medicine;
+		this.medicineId = medicineId;
 	}
 
 	public MedicineDetails() {

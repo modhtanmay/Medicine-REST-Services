@@ -29,7 +29,7 @@ public class Medicine {
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date expDate;
 	
-	@OneToMany(mappedBy = "medicine")
+	@OneToMany(mappedBy = "medicineId")
 	private List<MedicineDetails> medicineDetail;
 	
 	public Integer getMedId() {
