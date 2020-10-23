@@ -1,10 +1,12 @@
 package com.cts.MLEU.MedicineRestServices.Model;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -26,6 +28,10 @@ public class Medicine {
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date expDate;
+	
+	@OneToMany(mappedBy = "medicine")
+	private List<MedicineDetails> medicineDetail;
+	
 	public Integer getMedId() {
 		return medId;
 	}
