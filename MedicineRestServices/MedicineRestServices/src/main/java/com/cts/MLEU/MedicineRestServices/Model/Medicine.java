@@ -16,7 +16,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Medicine {
 	
 	@Id
-	@GeneratedValue
 	private Integer medId;
 	private String medName;
 	private String medType;

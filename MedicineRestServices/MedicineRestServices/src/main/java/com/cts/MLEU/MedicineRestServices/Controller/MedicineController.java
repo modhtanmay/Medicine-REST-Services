@@ -117,4 +117,14 @@ public class MedicineController {
 	public ResponseEntity<Object> getTopFiveStock() {
 		return new ResponseEntity<>(medicineService.findTopFiveStockByPrice(), HttpStatus.OK);
 	}
+	
+	@GetMapping("/searchByCompName/{compName}")
+	public ResponseEntity<Object> searchMedicine(@PathVariable String compName) {
+		return new ResponseEntity<>(medicineService.searchByCompName(compName), HttpStatus.OK);
+	}
+	
+	@GetMapping("/listByCompRank")
+	public ResponseEntity<Object> listByCompRank() {
+		return new ResponseEntity<>(medicineService.listByCompRanking(), HttpStatus.OK);
+	}
 }

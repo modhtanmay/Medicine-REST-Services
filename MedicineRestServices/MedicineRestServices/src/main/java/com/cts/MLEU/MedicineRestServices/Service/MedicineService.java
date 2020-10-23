@@ -31,4 +31,8 @@ public interface MedicineService {
 	
 	public List<Medicine> findTopFiveStockByPrice();
 	
+	public List<Medicine> searchByCompName(String compName);
+	
+	public List<Medicine> listByCompRanking();
+	
 }

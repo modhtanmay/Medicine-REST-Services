@@ -82,4 +82,16 @@ public class MedicineServiceImpl implements MedicineService {
 		return medicineRepository.findByExpDateBetween(startDate, endDate);
 	}
 
+	@Override
+	public List<Medicine> searchByCompName(String compName) {
+		// TODO Auto-generated method stub
+		return medicineRepository.searchByCompName(compName);
+	}
+
+	@Override
+	public List<Medicine> listByCompRanking() {
+		// TODO Auto-generated method stub
+		return medicineRepository.listByCompRanking();
+	}
+
 }
