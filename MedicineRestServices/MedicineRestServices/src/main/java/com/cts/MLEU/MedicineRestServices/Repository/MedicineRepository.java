@@ -6,4 +6,5 @@ import com.cts.MLEU.MedicineRestServices.Model.Medicine;
 
 public interface MedicineRepository extends JpaRepository<Medicine, Integer> {
 
+	
 }

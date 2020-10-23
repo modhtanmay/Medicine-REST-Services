@@ -18,7 +18,7 @@ public class Medicine {
 	private Integer medId;
 	private String medName;
 	private String medType;
-	private Double medprice;
+	private Double medPrice;
 	private Integer medStock;
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -45,10 +45,10 @@ public class Medicine {
 		this.medType = medType;
 	}
 	public Double getMedprice() {
-		return medprice;
+		return medPrice;
 	}
-	public void setMedprice(Double medprice) {
-		this.medprice = medprice;
+	public void setMedprice(Double medPrice) {
+		this.medPrice = medPrice;
 	}
 	public Integer getMedStock() {
 		return medStock;
@@ -68,13 +68,13 @@ public class Medicine {
 	public void setExpDate(Date expDate) {
 		this.expDate = expDate;
 	}
-	public Medicine(Integer medId, String medName, String medType, Double medprice, Integer medStock, Date manDate,
+	public Medicine(Integer medId, String medName, String medType, Double medPrice, Integer medStock, Date manDate,
 			Date expDate) {
 		super();
 		this.medId = medId;
 		this.medName = medName;
 		this.medType = medType;
-		this.medprice = medprice;
+		this.medPrice = medPrice;
 		this.medStock = medStock;
 		this.manDate = manDate;
 		this.expDate = expDate;
